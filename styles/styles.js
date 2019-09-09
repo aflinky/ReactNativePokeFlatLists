@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     height: 50,
     width: 50
+  },
+  pokemonImage: {
+    height: 250,
+    width: 250
+  },
+  nameOfPokemon: {
+    fontSize: 25
   }
 })
 

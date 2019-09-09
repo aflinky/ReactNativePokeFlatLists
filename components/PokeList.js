@@ -8,6 +8,7 @@ import {
   Image
 } from 'react-native';
 import styles from '../styles/styles'
+import PokeCard from './PokeCard'
 
 export default class pokeList extends PureComponent {
   state = {
@@ -27,15 +28,7 @@ export default class pokeList extends PureComponent {
   }
 
   renderItem(data) {
-    return <TouchableOpacity style={{ backgroundColor: 'transparent' }}>
-      <View style={styles.listItemContainer}>
-        <Text style={styles.pokeItemHeader}>
-          {data.item.name}
-        </Text>
-        <Image source={{ uri: 'https://res.cloudinary.com/aa1997/image/upload/v1535930682/pokeball-image.jpg' }}
-          style={styles.pokeImage} />
-      </View>
-    </TouchableOpacity>
+    return <PokeCard {...data.item} />
   }
 
   render() {
